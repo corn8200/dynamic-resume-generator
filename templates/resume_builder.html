@@ -2,99 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Resume – John Cornelius</title>
+  <title>Resume – {{ resume.name }}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='resume_style.css') }}">
 </head>
 <body>
   <div class="container">
     <div class="resume-header">
-      <h1>John Cornelius</h1>
-      <p>Staff Technical Program Manager • Automation & Digital Operations • Process Excellence</p>
+      <h1>{{ resume.name }}</h1>
+      <p>{{ resume.title }}</p>
       <p>
-        Harpers Ferry, WV • 
-        <a href="mailto:corn82@icloud.com">corn82@icloud.com</a> • 
-        (304) 268-4985<br>
-        <a href="https://linkedin.com/in/johncornelius" target="_blank" rel="noopener noreferrer">linkedin.com/in/johncornelius</a> •
-        <a href="https://github.com/corn8200" target="_blank" rel="noopener noreferrer">github.com/corn8200</a>
+        {{ resume.contact.location }} • 
+        <a href="mailto:{{ resume.contact.email }}">{{ resume.contact.email }}</a> • 
+        {{ resume.contact.phone }}<br>
+        <a href="{{ resume.contact.linkedin }}" target="_blank" rel="noopener noreferrer">linkedin.com/in/johncornelius</a> •
+        <a href="{{ resume.contact.github }}" target="_blank" rel="noopener noreferrer">github.com/corn8200</a>
       </p>
     </div>
 
     <section class="resume-section">
       <h2>Summary</h2>
-      <p>Experienced technical program manager with 20+ years leading complex automation, analytics, and process improvement initiatives across manufacturing, logistics, and aviation. Proven success in deploying SCADA, Power Platform, and AI-driven tools to reduce downtime, streamline operations, and drive measurable business outcomes. Skilled in Lean Six Sigma, Agile, and cross-functional team leadership to deliver digital transformation in high-stakes, fast-moving environments. Trusted to manage multimillion-dollar programs with clarity, urgency, and results.</p>
+      <p>{{ resume.summary }}</p>
     </section>
 
     <section class="resume-section">
       <h2>Skills</h2>
       <ul class="two-column">
-        <li>Lean Six Sigma (Bronze Belt)</li>
-        <li>Program Management (JIRA, MS Project, Confluence)</li>
-        <li>Agile / SAFe / MBSE / Risk-Based Planning</li>
-        <li>Automation Strategy & Roadmap Execution</li>
-        <li>Power Automate, Power Apps, SharePoint</li>
-        <li>Process Optimization & Root Cause Analysis</li>
-        <li>Industrial Automation & SCADA Systems</li>
-        <li>Data Visualization (Power BI, Excel, SQL)</li>
-        <li>Digital Transformation & KPI Dashboards</li>
-        <li>Cross-Functional Stakeholder Alignment</li>
-        <li>Change Management & Process Reengineering</li>
-        <li>24/7 Operations & DuPont Scheduling</li>
-        <li>Fleet, Logistics & Supply Chain Management</li>
+        {% for skill in resume.skills %}
+        <li>{{ skill }}</li>
+        {% endfor %}
       </ul>
     </section>
 
     <section class="resume-section">
       <h2>Experience</h2>
+      {% for job in resume.experience %}
       <div class="job">
         <div class="job-header">
-          <h3>Technical Program Manager <span class="dates">(Jan 2022 – Present)</span></h3>
-          <p class="company-info">Allmine Paving (A Tamko Company) | WV</p>
+          <h3>{{ job.title }} <span class="dates">({{ job.dates }})</span></h3>
+          <p class="company-info">{{ job.company }} {% if job.location %}| {{ job.location }}{% endif %}</p>
         </div>
         <ul>
-          <li>Directed cross-functional technical teams for 24/7 industrial operations, including supply chain, automation systems, and plant performance analytics.</li>
-          <li>Led digital infrastructure initiatives including mobile dashboarding and SCADA integration, reducing downtime by 12% and operator lag by 25%.</li>
-          <li>Managed stakeholder communication across vendor, transportation, and procurement channels to ensure risk-mitigated delivery and budget adherence.</li>
-          <li>Applied Lean Six Sigma and Agile principles to implement system upgrades and eliminate bottlenecks across operations and asset scheduling workflows.</li>
+          {% for duty in job.duties %}
+          <li>{{ duty }}</li>
+          {% endfor %}
         </ul>
       </div>
-
-      <div class="job">
-        <div class="job-header">
-          <h3>Technical Program Manager <span class="dates">(2009 – 2021)</span></h3>
-          <p class="company-info">U.S. Army (160th SOAR)</p>
-        </div>
-        <ul>
-          <li>Managed full lifecycle of autonomous aviation and digital systems programs, with end-to-end delivery of advanced training and automation tools.</li>
-          <li>Led 100+ personnel and oversaw $48M in assets while managing P&amp;L-equivalent responsibilities across training, logistics, and technical operations.</li>
-          <li>Modernized training and operations by digitizing workflows and implementing telemetry analytics, reducing admin lag by 40%.</li>
-          <li>Implemented Agile and system modeling practices to improve pilot readiness throughput by 22% across distributed locations.</li>
-          <li>Planned and coordinated logistics, equipment moves, and remote system testing for 50+ aircraft with zero safety incidents.</li>
-          <li>Briefed senior stakeholders on risk, schedule, and progress metrics to drive decision-making across interagency teams.</li>
-        </ul>
-      </div>
+      {% endfor %}
     </section>
 
     <section class="resume-section">
       <h2>Education</h2>
+      {% for edu in resume.education %}
       <div class="education-item">
-        <h3>Master of Science (M.S.), Unmanned Systems – Human Factors</h3>
-        <p class="university-info">Embry-Riddle Aeronautical University | 4.0 GPA</p>
+        <h3>{{ edu.degree }}</h3>
+        <p class="university-info">{{ edu.school }} {% if edu.details %}| {{ edu.details }}{% endif %}</p>
       </div>
-      <div class="education-item">
-        <h3>Bachelor of Science (B.S.), Aeronautics</h3>
-        <p class="university-info">Embry-Riddle Aeronautical University</p>
-      </div>
+      {% endfor %}
     </section>
 
     <section class="resume-section">
       <h2>Clearance & Certifications</h2>
       <ul>
-        <li>Project Management Professional (PMP) <span class="cert-details">– Simplilearn, Issued Aug 2021</span></li>
-        <li>Agile Scrum Master <span class="cert-details">– Simplilearn, Issued Sep 2021</span></li>
-        <li>Risk Management Professional <span class="cert-details">– Simplilearn, Issued Sep 2021</span></li>
-        <li>Customer Centric Digital Transformation <span class="cert-details">– Simplilearn, Issued Nov 2021</span></li>
-        <li>Lean Six Sigma Green Belt <span class="cert-details">– Simplilearn, Issued Oct 2021</span></li>
-        <li>Lean Six Sigma Bronze (Advanced Statistics) <span class="cert-details">– Lean Methods Group, Issued Dec 2023</span></li>
+        {% for cert in resume.certifications %}
+        <li>{{ cert.name }} <span class="cert-details">– {{ cert.issuer }}</span></li>
+        {% endfor %}
       </ul>
     </section>
   </div>

@@ -20,7 +20,7 @@ body {
 }
 .resume-header {
   text-align: center;
-  background: linear-gradient(to right, #2C3E50, #2980B9);
+  background: linear-gradient(to right, var(--primary), var(--accent));
   color: white;
   padding: 0.3rem 0.5rem;
   border-radius: 4px;

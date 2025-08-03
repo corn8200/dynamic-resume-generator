@@ -23,4 +23,4 @@ Ultimately, this project is a small reflection of how I like to work: find a pro
 2.  Navigate to the project directory: `cd report`
 3.  Install dependencies: `pip install -r requirements.txt`
 4.  Run the Flask application: `python app.py`
-5.  Open your browser to `http://127.0.0.1:5000/resume`
+5.  Open your browser to `http://127.0.0.1:5000/`
