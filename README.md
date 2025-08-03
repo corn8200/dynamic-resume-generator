@@ -9,13 +9,14 @@ I'm a big believer that a good TPM should stay close to the code. I built this s
 1.  **To Keep My Skills Sharp:** It's a fun, practical way to stay current with Python, web servers, and modern front-end practices.
 2.  **To Treat My Resume Like a Product:** Using Git for version control means I can track changes, experiment with formats, and always have a single source of truth.
 3.  **To Solve a Personal Problem:** I wanted a resume that looked great on screen and printed perfectly to a one-page PDF every single time, without fighting with Word templates. This app does exactly that.
+4.  **To Separate Content from Presentation:** All resume content lives in a clean Python dictionary in `app.py`, making updates simple without ever needing to touch the HTML template.
 
 Ultimately, this project is a small reflection of how I like to work: find a problem, and build a clean, simple solution for it.
 
 ## Tech Stack
 
 - **Backend:** Python 3, Flask
-- **Frontend:** HTML5, CSS3
+- **Frontend:** HTML5, CSS3, Jinja2 Templating
 
 ## How to Run It
 
