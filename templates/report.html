@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Report – John Cornelius</title>
+  <style>
+    :root {
+      --primary: #2C3E50;
+      --accent: #2980B9;
+      --font: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif;
+    }
+
+    body {
+      font-family: var(--font);
+      margin: 0;
+      padding: 2rem;
+      background: #fff;
+      color: #222;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: auto;
+      background: #fefefe;
+      padding: 2rem;
+      border-radius: 0;
+    }
+
+
+    header {
+      display: block;
+      text-align: left;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.3rem;
+      margin-top: 1.5rem;
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+      line-height: 1.4;
+    }
+
+    section {
+      margin-bottom: 1.25rem;
+      page-break-inside: avoid;
+    }
+
+    ul {
+      padding-left: 1.25rem;
+    }
+
+    .highlight {
+      background: #ecf0f1;
+      padding: 0.75rem;
+      border-left: 4px solid var(--accent);
+      margin: 1rem 0;
+      font-style: italic;
+    }
+
+    .photo {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      margin-top: 1rem;
+    }
+
+    table.top-banner {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+    }
+    .top-banner td {
+      vertical-align: middle;
+      text-align: center;
+    }
+    .top-banner .left {
+      width: 1in;
+      text-align: left;
+      padding-left: 0.5rem;
+    }
+    .top-banner .right {
+      width: 1.5in;
+      text-align: right;
+      padding-right: 0.5rem;
+    }
+    .top-banner .center {
+      padding: 0 1rem;
+    }
+    .qr-img {
+      height: 0.5in;
+    }
+    .meta {
+      margin-top: -0.5rem;
+      color: #666;
+      font-style: italic;
+    }
+
+    .logo {
+      height: 1.5in;
+    }
+
+    @media print {
+      body {
+        padding: 0;
+      }
+
+      .container {
+        padding: 1rem;
+      }
+
+      .qr {
+        height: 1in;
+        background: #fff;
+      }
+      .logo {
+        height: 1.5in;
+        background: #fff;
+      }
+      .qr-img {
+        height: 0.5in;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div style="position: relative;">
+    <table class="top-banner">
+      <tr>
+        <td class="left">
+          <img src="{{ url_for('static', filename='qr.png') }}" alt="QR Code" class="qr-img" />
+        </td>
+        <td class="center">
+          <h1>Weekend Trip Report: Shenandoah Overlook</h1>
+          <p class="meta">Trip Date: July 27–28, 2025 • Reported by John Cornelius</p>
+        </td>
+        <td class="right">
+          <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo" />
+        </td>
+      </tr>
+    </table>
+    <div class="container">
+
+      <section>
+        <h2>Overview</h2>
+        <p>Quick two-day hike with the family exploring Blue Ridge vistas, local wildlife, and backcountry trails. Logged trail times, gear tests, and some wildlife observations.</p>
+      </section>
+
+      <section>
+        <h2>Highlights</h2>
+        <ul>
+          <li>Trailhead: Raven Rock, Entry 103B</li>
+          <li>Total Distance: 6.4 miles</li>
+          <li>Spotted: Black bear cub, 2 deer, red fox</li>
+          <li>New boots passed comfort/waterproof test</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Notes & Lessons</h2>
+        <p>Don’t trust the NOAA forecast under the canopy — storm moved in early. Gear deployment drills went well. Need to refine morning packing procedure for better speed.</p>
+        <div class="highlight">Pro Tip: Store firestarter in backup Ziplock inside gaiter pouch — not inside the main med kit.</div>
+      </section>
+
+      <section>
+        <h2>Photos</h2>
+        <img src="{{ url_for('static', filename='photo.jpg') }}" alt="Overlook photo" class="photo" />
+      </section>
+
+      <section style="page-break-before: always;">
+        <h2>Next Steps</h2>
+        <ul>
+          <li>Refactor gear checklist to emphasize waterproofing</li>
+          <li>Research bear spray options with higher shelf life</li>
+          <li>Investigate drone flyover for visual logging</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
