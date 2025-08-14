@@ -7,16 +7,17 @@
 </head>
 <body>
   <div class="container">
+    {% include 'navigation.html' %}
     <div class="resume-header">
-      <h1>{{ resume.name }}</h1>
-      <p>{{ resume.title }}</p>
-      <p>
-        {{ resume.contact.location }} • 
-        <a href="mailto:{{ resume.contact.email }}">{{ resume.contact.email }}</a> • 
-        {{ resume.contact.phone }}<br>
-        <a href="{{ resume.contact.linkedin }}" target="_blank" rel="noopener noreferrer">linkedin.com/in/johncornelius</a> •
-        <a href="{{ resume.contact.github }}" target="_blank" rel="noopener noreferrer">github.com/corn8200</a>
-      </p>
+      <h1 class="name">{{ resume.name }}</h1>
+      <p class="title">{{ resume.title }}</p>
+      <div class="contact-info">
+        <span>{{ resume.contact.location }}</span> •
+        <span><a href="mailto:{{ resume.contact.email }}">{{ resume.contact.email }}</a></span> •
+        <span>{{ resume.contact.phone }}</span><br>
+        <span><a href="{{ resume.contact.linkedin }}" target="_blank" rel="noopener noreferrer">{{ resume.contact.linkedin.replace("https://", "") }}</a></span> •
+        <span><a href="{{ resume.contact.github }}" target="_blank" rel="noopener noreferrer">{{ resume.contact.github.replace("https://", "") }}</a></span>
+      </div>
     </div>
 
     <section class="resume-section">
@@ -26,11 +27,18 @@
 
     <section class="resume-section">
       <h2>Skills</h2>
-      <ul class="two-column">
-        {% for skill in resume.skills %}
-        <li>{{ skill }}</li>
+      <div class="skills-grid">
+        {% for category, skills_list in resume.skills.items() %}
+        <div class="skill-category">
+          <h3>{{ category }}</h3>
+          <ul>
+            {% for skill in skills_list %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+          </ul>
+        </div>
         {% endfor %}
-      </ul>
+      </div>
     </section>
 
     <section class="resume-section">
@@ -38,14 +46,23 @@
       {% for job in resume.experience %}
       <div class="job">
         <div class="job-header">
-          <h3>{{ job.title }} <span class="dates">({{ job.dates }})</span></h3>
-          <p class="company-info">{{ job.company }} {% if job.location %}| {{ job.location }}{% endif %}</p>
+          <h3>{{ job.title }}</h3>
+          <span class="dates">{{ job.dates }}</span>
         </div>
+        <p class="company-info">{{ job.company }}{% if job.location %} | {{ job.location }}{% endif %}</p>
         <ul>
           {% for duty in job.duties %}
           <li>{{ duty }}</li>
           {% endfor %}
         </ul>
+        {% if job.achievements %}
+        <h4 class="achievements-heading">Key Achievements</h4>
+        <ul class="achievements-list">
+          {% for achievement in job.achievements %}
+          <li>{{ achievement | safe }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
       </div>
       {% endfor %}
     </section>
@@ -61,7 +78,7 @@
     </section>
 
     <section class="resume-section">
-      <h2>Clearance & Certifications</h2>
+      <h2>Certifications</h2>
       <ul>
         {% for cert in resume.certifications %}
         <li>{{ cert.name }} <span class="cert-details">– {{ cert.issuer }}</span></li>

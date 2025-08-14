@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cover Letter – {{ resume.name }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='resume_style.css') }}">
+</head>
+<body>
+  <div class="container">
+    {% include 'navigation.html' %}
+    <div class="resume-header">
+      <h1 class="name">{{ resume.name }}</h1>
+      <p class="title">{{ resume.title }}</p>
+      <div class="contact-info">
+        <span>{{ resume.contact.location }}</span> •
+        <span><a href="mailto:{{ resume.contact.email }}">{{ resume.contact.email }}</a></span> •
+        <span>{{ resume.contact.phone }}</span><br>
+        <span><a href="{{ resume.contact.linkedin }}" target="_blank" rel="noopener noreferrer">{{ resume.contact.linkedin.replace("https://", "") }}</a></span> •
+        <span><a href="{{ resume.contact.github }}" target="_blank" rel="noopener noreferrer">{{ resume.contact.github.replace("https://", "") }}</a></span>
+      </div>
+    </div>
+    <div class="cover-letter">
+      <div class="date">
+        <p>{{ date }}</p>
+      </div>
+      
+      <div class="body">
+        {% for paragraph in rendered_body %}
+          <p>{{ paragraph | safe }}</p>
+        {% endfor %}
+      </div>
+      <p>Sincerely,</p>
+      <div class="signature">
+        <img src="{{ url_for('static', filename='signature.png') }}" alt="{{ resume.name }}'s Signature">
+        <p>{{ resume.name }}</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

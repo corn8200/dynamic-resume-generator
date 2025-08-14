@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
+
 :root {
   --primary: #2C3E50;
   --accent: #3498DB; /* A slightly brighter, more modern blue */
@@ -22,26 +23,33 @@ body {
   text-align: center;
   background: linear-gradient(to right, var(--primary), var(--accent));
   color: white;
-  padding: 0.3rem 0.5rem;
+  padding: 0.2rem 0.5rem;
   border-radius: 4px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
-.resume-header h1 {
-  font-size: 1.6rem;
-  margin: 0.2rem 0;
+.resume-header .name {
+  font-size: 1.5rem;
+  margin: 0;
   color: white;
 }
 
-.resume-header p {
-  margin: 0.1rem 0;
+.resume-header .title {
   font-size: 0.9rem;
-  line-height: 1.5; /* Add line-height for multi-line contact info */
+  margin: 0.1rem 0;
   color: #ecf0f1;
 }
-.resume-header p:first-of-type {
-  margin-bottom: 0.5rem;
+
+.contact-info {
+  font-size: 0.8rem;
+  line-height: 1.3;
+  color: #ecf0f1;
 }
+
+.contact-info span {
+  margin: 0 0.2rem;
+}
+
 /* Style for the new clickable links in the header */
 .resume-header a {
   color: #ecf0f1;
@@ -49,16 +57,17 @@ body {
 }
 
 .resume-section {
-  margin-bottom: 0.8rem; /* Increased space to let shadows breathe */
-  padding: 0.35rem 0.75rem;
-  border: 1px solid #e5e7eb; /* Lighter, more subtle border */
+  margin-bottom: 0.7rem; /* Increased space to let shadows breathe */
+  padding: 0.25rem 0.5rem;
+  border: none; /* Lighter, more subtle border */
   border-radius: 8px; /* Softer corners to match the shadow */
-  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.1); /* Softer, more diffused shadow */
-  background-color: #fefefe;
+  box-shadow: none; /* Softer, more diffused shadow */
+  background-color: white;
 }
 
 .resume-section h2 {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
   border-bottom: 2px solid var(--accent);
   padding-bottom: 0.3rem;
   margin-bottom: 0.6rem;
@@ -93,20 +102,25 @@ body {
 .job-header {
   display: flex;
   justify-content: space-between;
+  align-items: baseline; /* Aligns title and date along their text baseline */
 }
 
 .resume-section ul li::marker {
   color: var(--accent);
 }
 
-.two-column {
-  columns: 2;
-  -webkit-columns: 2;
-  -moz-columns: 2;
-  list-style: disc outside;
-  gap: 2rem;
-  column-gap: 2rem;
-  font-size: 0.8rem;
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.skill-category h3 {
+  font-size: 1rem;
+  color: var(--primary);
+  margin-bottom: 0.2rem;
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 ul {
@@ -137,20 +151,90 @@ ul {
   color: #666;
 }
 
+.achievements-heading {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin-top: 0.6rem;
+    margin-bottom: 0.3rem;
+}
+
+.achievements-list li {
+    font-style: italic;
+}
+
+/* Navigation */
+.navigation {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.navigation a {
+  display: inline-block;
+  margin: 0 1rem;
+  font-size: 1.1rem;
+  color: var(--primary);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.navigation a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Cover Letter */
+.cover-letter {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cover-letter .date {
+  text-align: right;
+  margin-bottom: 1.5rem;
+}
+
+.cover-letter .recipient {
+  margin-bottom: 1rem;
+}
+
+.cover-letter .body p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.cover-letter a {
+  color: var(--accent);
+}
+
+.signature {
+  margin-top: 0.5rem;
+}
+
+.signature img {
+  max-width: 100px;
+  height: auto;
+}
+
+.signature p {
+  margin-top: 0.25rem;
+}
+
 @media print {
   /* --- Print-Specific Optimizations for a One-Page Resume --- */
   @page {
-    /* Set print margins to create a clean, full-page layout */
-    margin: 0.5in;
+    /* Tighter margins to maximize printable area */
+    margin: 0.3in;
   }
 
   body {
-    font-size: 0.85rem; /* Slightly larger base for readability */
+    font-size: 0.78rem; /* Slightly smaller base font to save space */
     padding: 0;
     margin: 0;
     background: #fff;
     color: #000;
-    line-height: 1.2;
+    line-height: 1.15; /* Tighter line height */
   }
 
   .container {
@@ -160,8 +244,8 @@ ul {
   }
 
   .resume-header {
-    padding: 0.2rem 0.5rem;
-    margin-bottom: 0.5rem;
+    padding: 0.1rem 0.5rem;
+    margin-bottom: 0.15rem; /* Reduced space after header */
     /* Force background colors and images to print */
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
@@ -175,36 +259,46 @@ ul {
     text-decoration: none;
   }
 
-  .resume-header h1 {
-    font-size: 1.15rem;
+  .resume-header .name {
+    font-size: 1.05rem;
   }
 
-  .resume-header p {
-    font-size: 0.75rem;
-    line-height: 1.4;
+  .resume-header .title {
+    font-size: 0.7rem;
+  }
+
+  .contact-info {
+    font-size: 0.65rem;
+    line-height: 1.2;
   }
 
   .resume-section {
-    padding: 0.05rem 0.5rem; /* Tighter padding */
-    margin-bottom: 0.2rem; /* Reduced space between sections */
+    padding: 0.05rem 0.4rem; /* Tighter padding */
+    margin-bottom: 0.1rem; /* Further reduced space between sections */
     box-shadow: none;
     border: 0.5px solid #ccc;
   }
 
+  .job, .education-item {
+    /* Reduce space between each job/education entry */
+    margin-bottom: 0.5rem;
+  }
+
   .resume-section h2 {
     font-size: 1rem;
-    margin-bottom: 0.2rem; /* Reduced space below section titles */
+    text-transform: uppercase;
+    margin-bottom: 0.1rem; /* Reduced space below section titles */
     padding-bottom: 0.1rem; /* Tighter padding */
   }
 
   .resume-section h3 {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     margin: 0;
   }
 
   .company-info, .university-info {
-    font-size: 0.8rem;
-    margin: 0 0 0.2rem 0;
+    font-size: 0.75rem;
+    margin: 0 0 0.1rem 0; /* Reduced space below company name */
   }
 
   .cert-details {
@@ -213,22 +307,52 @@ ul {
 
   /* This is the key change to reclaim vertical space */
   .resume-section ul li {
-    margin-bottom: 0.05rem; /* Drastically reduce space between bullet points for print */
-    line-height: 1.15; /* Slightly tighter line height for lists */
+    margin-bottom: 0; /* Remove space between list items */
+    line-height: 1; /* Even tighter line height for bullet points */
   }
 
-  .two-column {
-    column-gap: 1.5rem;
-    font-size: 0.75rem;
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .skill-category h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0.1rem;
+    padding-bottom: 0;
+    border-bottom: none;
   }
 
   ul {
-    padding-left: 1rem;
+    padding-left: 0.8rem;
     margin-top: 0.1rem;
   }
 
   .dates {
     font-size: 0.7rem;
     white-space: nowrap; /* Prevent dates from wrapping in print */
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .cover-letter {
+    max-width: 100%;
+  }
+
+  .cover-letter .date,
+  .cover-letter .recipient {
+    margin-bottom: 1rem;
+  }
+
+  .cover-letter .body p {
+    line-height: 1.4;
+    font-size: 0.9rem;
+  }
+
+  .signature p {
+    font-size: 10pt !important;
+    line-height: normal !important;
   }
 }

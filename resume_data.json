@@ -1,0 +1,111 @@
+{
+  "format_scale": "100%",
+  "name": "John Cornelius",
+  "title": "Senior Logistics Manager – Multi-Site Supply Chain & Operations",
+  "contact": {
+    "location": "Harpers Ferry, WV",
+    "email": "corn82@icloud.com",
+    "phone": "(304) 268-4985",
+    "linkedin": "https://linkedin.com/in/johncornelius",
+    "github": "https://github.com/corn8200"
+  },
+  "summary": "Senior logistics and operations leader with 15+ years’ experience managing multi-site supply chain, warehousing, and manufacturing operations with budgets up to $48M. Proven track record in achieving 95%+ DIFOT, sustaining >99.5% inventory accuracy, and leading safety programs with zero OSHA recordables. Expert in 3PL management, SAP/ERP integration, TPM/Lean Six Sigma, and continuous improvement. Skilled at developing managers and supervisors, driving cross-functional alignment, and delivering cost savings while enhancing service and safety.",
+  "skills": {
+    "Operations Leadership": [
+      "Multi-Site Logistics & Warehouse Operations Leadership",
+      "Regional Supply Chain Strategy & Execution",
+      "Safety Program Leadership – Zero OSHA Recordables",
+      "Change Management & Start-Up Operations"
+    ],
+    "Supply Chain Optimization": [
+      "3PL Partnership Management & KPI Performance",
+      "S&OP / Demand & Supply Planning",
+      "Inventory Accuracy Management – Sustaining >99.5%",
+      "Delivery in Full On Time (DIFOT) Performance Optimization"
+    ],
+    "Systems & Analytics": [
+      "SAP / ERP / MES Integration (SAP, Oracle, MS Dynamics)",
+      "Warehouse Automation & Productivity Initiatives",
+      "TPM Implementation & 5S Culture",
+      "Lean Six Sigma (Green Belt, Bronze) | Kaizen, Continuous Improvement"
+    ],
+    "Budget Management": [
+      "Budget Management – $20M–$48M Portfolios",
+      "Cross-Functional Team Development & Leadership"
+    ]
+  },
+  "experience": [
+    {
+      "title": "Sr. Operations & Data Analytics Manager",
+      "company": "Allmine Paving (A Tamko Company)",
+      "location": "WV",
+      "dates": "Jan 2022 – Present",
+      "duties": [
+        "Directed multi-site logistics and manufacturing operations for 24/7 asphalt production facilities, delivering Safety, Service, and Savings while managing $XXM+ budgets and driving service and cost initiatives.",
+        "Led monthly S&OP integrating demand forecasts, maintenance schedules, and supplier lead times to improve and sustain >95% DIFOT.",
+        "Managed 3PL relationships, setting KPIs and ensuring adherence to performance metrics for on-time, in-full deliveries and improving cost-per-unit delivered (CPK) by 8%.",
+        "Ensured inventory accuracy >99.5% net with cycle counts, bin audits, and process discipline to sustain bin-level accuracy.",
+        "Implemented TPM and 5S culture, driving safety, operational efficiency, workforce engagement, and sustaining zero OSHA recordables.",
+        "Directed capital projects across multiple sites, meeting budget, timeline, and compliance requirements while hitting safety targets.",
+        "Championed and directly led Lean Six Sigma, Kaizen, and data-driven root cause analysis projects from conception through implementation, delivering measurable gains in throughput, quality, cost reduction, and implementing logistics automation solutions."
+      ],
+      "achievements": [
+        "<strong>Increased</strong> regional throughput by <strong>12%</strong> while <strong>reducing</strong> overtime costs through Lean scheduling and predictive maintenance.",
+        "<strong>Improved</strong> DIFOT by <strong>15%</strong> by integrating GPS-enabled fleet and delivery tracking software with automated reporting workflows, then applying Monte Carlo analysis and regression modeling to simulate variable conditions and optimize delivery scheduling.",
+        "<strong>Improved</strong> delivery quality scores by <strong>18%</strong> by designing a weighted averages formula as the foundation for a machine learning model, enabling proactive quality management and supplier performance improvement.",
+        "<strong>Achieved</strong> >99.5% inventory accuracy across all sites, <strong>reducing</strong> stockouts and excess inventory carrying costs.",
+        "<strong>Sustained</strong> zero OSHA recordables over 3 years.",
+        "<strong>Delivered</strong> $2.3M in cost savings by <strong>optimizing</strong> 3PL contracts, freight routing, and supplier performance."
+      ]
+    },
+    {
+      "title": "Sr. Program Manager – Aviation & Advanced Systems",
+      "company": "U.S. Army (160th SOAR)",
+      "location": null,
+      "dates": "2009 – 2021",
+      "duties": [
+        "Directed lifecycle of multimillion-dollar aviation and special operations programs across multiple global sites, integrating avionics, automation, traditional forecasting methods, and unmanned systems to improve mission readiness.",
+        "Led engineering, R&D, logistics, operations, and IT teams, applying program governance, risk management, and Lean/Agile methods to deliver mission-critical capabilities on time and within budget.",
+        "Managed global logistics networks, supplier contracts, and maintenance programs for $48M+ in aviation assets, ensuring >95% mission-capable rates.",
+        "Directed 3PL partnerships supporting global deployment and sustainment operations, setting performance KPIs, overseeing compliance, and optimizing routes to meet mission timelines.",
+        "Implemented advanced telemetry systems, predictive analytics, and planning tools to enhance operational resilience and end-to-end supply chain visibility."
+      ],
+      "achievements": [
+        "<strong>Reduced</strong> part shortages by <strong>22%</strong> and <strong>improved</strong> global mission readiness by applying traditional forecasting methods, predictive supply chain analytics, and proactive maintenance scheduling.",
+        "<strong>Executed</strong> $4.6M flight test program and <strong>supported</strong> 200+ global missions with zero safety incidents while managing $48M in aviation assets and sustaining >98% mission-capable rates for critical equipment.",
+        "<strong>Integrated</strong> digital twin simulations into mission planning, <strong>reducing</strong> planning time by 30% and <strong>improving</strong> multi-site resource allocation efficiency.",
+        "<strong>Led</strong> cross-functional continuous improvement projects using Lean Six Sigma, resulting in measurable gains in operational efficiency and asset utilization.",
+        "<strong>Improved</strong> 3PL on-time performance by <strong>14%</strong> through KPI-driven performance management, contract optimization, and data-based route planning supporting global deployment and sustainment."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master of Science (M.S.), Unmanned Systems – Human Factors",
+      "school": "Embry-Riddle Aeronautical University",
+      "details": null
+    },
+    {
+      "degree": "Bachelor of Science (B.S.), Aeronautics",
+      "school": "Embry-Riddle Aeronautical University",
+      "details": null
+    }
+  ],
+  "certifications": [
+    { "name": "Project Management Professional (PMP)", "issuer": "Simplilearn, Issued Aug 2021" },
+    { "name": "Lean Six Sigma (Bronze, Green Belt)", "issuer": "Lean Methods Group & Simplilearn" },
+    { "name": "Agile Scrum Master", "issuer": "Simplilearn, Issued Sep 2021" }
+  ],
+  "cover_letter": {
+    "hiring_manager": "Ecolab Recruiting Team",
+    "company_name": "Ecolab",
+    "body": [
+      "Dear Ecolab Recruiting Team,",
+      "I am excited to apply for the Senior Logistics Manager – Northeast Region position at Ecolab, as advertised on LinkedIn. With over 15 years of experience leading multi-site supply chain, warehousing, and manufacturing operations with budgets up to $48M, I offer a proven record of delivering Safety, Service, and Savings while improving efficiency, quality, and cost performance.",
+      "In my current role as Sr. Operations & Data Analytics Manager at Allmine Paving (A Tamko Company), I lead multi-site operations, improve and sustain >95% DIFOT, manage 3PL partnerships to optimize cost-per-unit delivered, and ensure >99.5% inventory accuracy. My leadership in implementing TPM, Lean Six Sigma, and logistics automation solutions has driven measurable gains, including a 12% throughput increase, 18% improvement in delivery quality, and $2.3M in cost savings.",
+      "Previously, as Sr. Program Manager – Aviation & Advanced Systems for the U.S. Army’s 160th SOAR, I managed global logistics networks, directed 3PL partnerships supporting international operations, and sustained >98% mission-capable rates for $48M in critical aviation equipment. These experiences have honed my ability to lead teams, develop managers, and drive continuous improvement across complex, multi-site environments.",
+      "I am eager to bring my expertise in 3PL management, SAP/ERP integration, TPM, Lean Six Sigma, and safety leadership to Ecolab’s logistics network. I share Ecolab’s commitment to excellence and operational performance and am confident I can help deliver 95%+ DIFOT, sustain world-class inventory accuracy, and build an engaged, high-performing team.",
+      "Thank you for considering my application. I look forward to the opportunity to discuss how my skills and experience align with Ecolab’s goals."
+    ]
+  }
+}
